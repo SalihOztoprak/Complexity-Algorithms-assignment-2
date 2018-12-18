@@ -15,7 +15,7 @@ public class DEPQ<E> {
     }
 
     public int size() {
-        return initialLength-1;
+        return initialLength - 1;
     }
 
     public E getLow() {
@@ -103,4 +103,5 @@ public class DEPQ<E> {
         ees = tempList;
         priority = tempPriority;
     }
+
 }
