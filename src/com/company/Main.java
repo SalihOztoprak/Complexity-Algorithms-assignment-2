@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.depq.DEPQ;
+import com.company.depq.DEPQMinMaxHeap;
 
 public class Main {
 
@@ -9,7 +9,7 @@ public class Main {
     }
 
     private void run() {
-        DEPQ<String> strings = new DEPQ<>();
+        DEPQMinMaxHeap<String> strings = new DEPQMinMaxHeap<>();
 
         System.out.println(strings.isEmpty());
         strings.add("Geld"); //Hoogste prioriteit
@@ -25,6 +25,7 @@ public class Main {
         strings.removeHigh();
         strings.removeHigh();
         strings.removeHigh();
+        strings.removeLow();
         System.out.println(strings.getHigh());
     }
 }

@@ -1,11 +1,13 @@
 package com.company.depq;
 
-public class DEPQ<E> implements MinMaxHeap {
+import java.util.Queue;
+
+public class DEPQMinMaxHeap<E> implements DEPQ {
     private int initialLength = 1;
     private E[] ees;
     private int[] priority;
-
-    public DEPQ() {
+    private Queue
+    public DEPQMinMaxHeap() {
         ees = (E[]) new Object[initialLength];
         priority = new int[initialLength];
     }
