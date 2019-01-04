@@ -9,7 +9,7 @@ public interface DEPQ<E> {
 
     E getHigh();
 
-    void add(E e);
+    void add(E e, int prio);
 
     E removeLow();
 
