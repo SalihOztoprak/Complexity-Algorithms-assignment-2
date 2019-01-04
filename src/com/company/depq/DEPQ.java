@@ -1,18 +1,18 @@
 package com.company.depq;
 
 public interface DEPQ<E> {
-    public boolean isEmpty();
+    boolean isEmpty();
 
-    public int size();
+    int size();
 
-    public E getLow();
+    E getLow();
 
-    public E getHigh();
+    E getHigh();
 
-    public void add(E e, int priority);
+    void add(E e);
 
-    public E removeLow();
+    E removeLow();
 
-    public E removeHigh();
+    E removeHigh();
 
 }
