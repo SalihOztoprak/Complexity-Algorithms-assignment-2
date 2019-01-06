@@ -11,36 +11,29 @@ public class Main {
     }
 
     private void run() {
-//        DEPQMinMaxHeap<Object> strings = new DEPQMinMaxHeap<>();
-//
-//        System.out.println(strings.isEmpty());
-//        strings.add("Thomas",20);
-//        strings.add("Salih",200);
-//        strings.add("Alex",34);
-//        strings.add("Willem",10);
-//        System.out.println(strings.size());
-//        System.out.println(strings.getHigh());
-//        System.out.println(strings.getLow());
-//        System.out.println(strings.isEmpty());
-//        strings.add("Frank",60);
-//        strings.removeHigh();
-//        strings.removeLow();
-//        System.out.println(strings.getHigh());
+        DEPQMinMaxHeap<Object> strings = new DEPQMinMaxHeap<>();
 
-        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int index = 10;
-
-        int[] tempList = new int[10];
-
-        for (int i = 0; i < numbers.length; i++) {
-            if (i == index && index != tempList.length) {
-                tempList[index] = numbers[index - 1];
-            } else {
-                tempList[i] = numbers[i];
-            }
-
-        }
-
-        System.out.println(Arrays.toString(tempList));
+        System.out.println(strings.isEmpty());
+        strings.add("Thomas",20);
+        strings.add("Salih",200);
+        strings.add("Alex",34);
+        strings.add("Willem",10);
+        strings.add("Thomas",12);
+        strings.add("Salih",124);
+        strings.add("Alex",341);
+        strings.add("Willem",1345);
+        strings.add("Thomas",132);
+        strings.add("Salih",789);
+        strings.add("Alex",567);
+        strings.add("Willem",90);
+        strings.add("Salih",1224);
+        strings.add("Alex",3415);
+        strings.add("Willem",5);
+        strings.add("Thomas",13562);
+        strings.add("Salih",78239);
+        strings.add("Alex",56567);
+        strings.add("Willem",910);
+        strings.add("yess", 1);
+        strings.displayHeap();
     }
 }
