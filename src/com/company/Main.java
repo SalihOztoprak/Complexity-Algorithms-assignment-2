@@ -2,8 +2,6 @@ package com.company;
 
 import com.company.depq.DEPQMinMaxHeap;
 
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -13,27 +11,41 @@ public class Main {
     private void run() {
         DEPQMinMaxHeap<Object> strings = new DEPQMinMaxHeap<>();
 
-        System.out.println(strings.isEmpty());
-        strings.add("Thomas",20);
-        strings.add("Salih",200);
-        strings.add("Alex",34);
-        strings.add("Willem",10);
-        strings.add("Thomas",12);
-        strings.add("Salih",124);
-        strings.add("Alex",341);
-        strings.add("Willem",1345);
-        strings.add("Thomas",132);
-        strings.add("Salih",789);
-        strings.add("Alex",567);
-        strings.add("Willem",90);
-        strings.add("Salih",1224);
-        strings.add("Alex",3415);
-        strings.add("Willem",5);
-        strings.add("Thomas",13562);
-        strings.add("Salih",78239);
-        strings.add("Alex",56567);
-        strings.add("Willem",910);
-        strings.add("yess", 1);
+        System.out.println("Is the DEPQ empty?: " + strings.isEmpty());
+
+        strings.add("Dog",20);
+        strings.add("Cat",200);
+        strings.add("Fish",34);
+        strings.add("Cow",10);
+        strings.add("Pig",12);
+        strings.add("Chicken",124);
+        strings.add("Sheep",341);
+        strings.add("Dolphin",1345);
+        strings.add("Rabbit",132);
+        strings.add("Monkey",789);
+        strings.add("Elephant",567);
+        strings.add("Giraffe",90);
+        strings.add("Goat",1224);
+        strings.add("Unicorn",5);
+        strings.add("Snake",13562);
+        strings.add("Human",78239);
+        strings.add("Wednesday Frog",56567);
+        strings.add("Owl",910);
+        strings.add("T-Series", 1);
+
         strings.displayHeap();
+
+        System.out.println("The lowest priority is " + strings.getLow());
+        System.out.println("The highest priority is " + strings.getHigh());
+
+        strings.removeLow();
+        strings.removeHigh();
+
+        strings.displayHeap();
+
+        System.out.println("The lowest priority is " + strings.getLow());
+        System.out.println("The highest priority is " + strings.getHigh());
+
+        System.out.println("The size of the DEPQ is " + strings.size());
     }
 }
