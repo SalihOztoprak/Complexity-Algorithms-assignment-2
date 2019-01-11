@@ -125,6 +125,7 @@ public class DEPQMinMaxHeap<E> implements DEPQ {
      */
     private void percolateUp(int yourIndex, int parentIndex, int height) {
         boolean mustSwap = false;
+        //Check if the current level is odd or even
         if (height % 2 == 0) {
             //EVEN (Min Level)
             if (priorities[yourIndex] > priorities[parentIndex]) {
@@ -173,7 +174,7 @@ public class DEPQMinMaxHeap<E> implements DEPQ {
         if (yourIndex == 0) {
             //Check for small items
             for (int index : indexes) {
-                if (index <= size()) {
+                if (index < size()) {
                     if (currentPriority > priorities[index]) {
                         currentPriority = priorities[index];
                         swapIndex = index;
@@ -183,7 +184,7 @@ public class DEPQMinMaxHeap<E> implements DEPQ {
         } else {
             //Check for large items
             for (int index : indexes) {
-                if (index <= size()) {
+                if (index < size()) {
                     if (currentPriority < priorities[index]) {
                         currentPriority = priorities[index];
                         swapIndex = index;
